@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    
+    /* Shopify Design Tokens */
+    --color-primary: #008060;
+    --color-primary-hover: #006E52;
+    --color-primary-dark: #004C3F;
+    --color-primary-light: #F0F7F5;
+    
+    --color-accent-amber: #F49342;
+    --color-accent-blue: #005BD3;
+    
+    --color-text-main: #1A1A1A;
+    --color-text-muted: #616161;
+    --color-border: #E1E3E5;
+  }
+}
+
+body {
+  background-color: #F8F9FA;
+  color: #1A1A1A;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Shopify Brand Utilities */
+.text-shopify {
+  color: #008060;
+}
+
+.bg-shopify {
+  background-color: #008060;
+}
+
+.bg-shopify:hover {
+  background-color: #006E52;
+}
+
+.bg-shopify-light {
+  background-color: #F0F7F5;
+}
+
+.border-shopify {
+  border-color: #008060;
+}
+
+/* Clean Underline Accent */
+.section-heading-underline {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 6px;
+}
+
+.section-heading-underline::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #008060;
+  border-radius: 9999px;
+}
+
+/* Product Card Styling */
+.product-card {
+  background: #FFFFFF;
+  border: 1px solid #E1E3E5;
+  border-radius: 1rem;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  border-color: #008060;
+  box-shadow: 0 16px 32px -8px rgba(0, 128, 96, 0.14);
+}
+
+/* Category Circular & Rounded Badges */
+.category-badge-card {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.category-badge-card:hover {
+  transform: translateY(-3px) scale(1.03);
+  border-color: #008060;
+  box-shadow: 0 10px 20px -6px rgba(0, 128, 96, 0.18);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F8F9FA;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D1D5DB;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9CA3AF;
+}
